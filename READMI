@@ -1,0 +1,6 @@
+the programm allows to evaluate the height of tree in two ways:
+	1. by the cycle over all nodes remembering all heights
+	2. by the recursive building of the tree/ then recursive calculation of height:
+	h = 1
+        for el in self.children:
+            h = max(h, 1 + el.height())
