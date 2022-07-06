@@ -11,16 +11,20 @@ class Tree:
         self.children = []
         self.data = data
         self.h = 1
+        self.probel = '_|'
 
     def height(self):
         h = 1
         for el in self.children:
             h = max(h, 1 + el.height())
+
+        self.h = h
         return h
 
     def print(self):
-        print('data of tree ', self.data, '  N children = ',len(self.children))
+        print(self.probel,'data of tree ', self.data, '  N children = ',len(self.children))
         for el in self.children:
+            el.probel = self.probel*2
             el.print()
 
 
